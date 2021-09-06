@@ -172,9 +172,7 @@ class AllDoctorsList extends StatelessWidget {
   Widget docPic(url) {
     return Stack(
       children: <Widget>[
-        Positioned.fill(child: Align(
-            alignment: Alignment.center,
-            child: CircularProgressIndicator())),
+
         Positioned.fill(
           child: Align(
             alignment: Alignment.center,

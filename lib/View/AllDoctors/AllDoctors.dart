@@ -76,12 +76,14 @@ class AllDoctors extends GetView<AllDoctorsController> {
 //TODO Government and city
                             Container(
                               width: width,
-                              height: height * 0.114,
+                              height: height * 0.120,
                               child: Center(
                                 child: Row(
                                   children: [
                                     //TODO Choose Government
                                     Container(
+                                      height: height * 0.80,
+
                                       decoration: BoxDecoration(
                                           color: ConstStyles.HeadersBackGround,
                                           border: Border.all(
@@ -93,6 +95,7 @@ class AllDoctors extends GetView<AllDoctorsController> {
                                         children: [
                                           Container(
                                             width: width * 0.39,
+
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
@@ -274,7 +277,7 @@ class AllDoctors extends GetView<AllDoctorsController> {
                             //TODO Specialist and Date
                             Container(
                               width: width,
-                              height: height * 0.114,
+                              height: height * 0.120,
                               child: Center(
                                 child: Row(
                                   children: [
@@ -537,18 +540,7 @@ class AllDoctors extends GetView<AllDoctorsController> {
                       ),
 
                       //TODO Doctors List
-                      RefreshIndicator(
-                        onRefresh: () {
-                          _controller.allSearchedDocList = null;
-                          _controller.docSearchName = null;
-                          _controller.searchDoc = TextEditingController();
-                          return _controller.getAllDoc(null).then((value) {
-                            _controller.allFilteredDocList = value;
-                            _controller.filteredDocList =
-                                _controller.allFilteredDocList;
-                          });
-                        },
-                        child: Container(
+                 Container(
                           color: ConstStyles.HeadersBackGround,
                           width: width,
                           height: height * 0.6,
@@ -569,7 +561,7 @@ class AllDoctors extends GetView<AllDoctorsController> {
                             },
                           ),
                         ),
-                      ),
+
                     ],
                   );
                 },
